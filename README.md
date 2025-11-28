@@ -1,3 +1,3 @@
-# President website
+# Milka lending page
 
 ![Project Preview](./public/poster.webp)
