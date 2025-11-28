@@ -1,11 +1,50 @@
+.titles {
+  .title {
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 125px;
+      width: 100vw;
+      background: url('../img/lights.webp') no-repeat left center;
+      background-size: auto 100%;
+      top: 50%;
+    }
+
+    &:before {
+      right: 100%;
+      transform: translate(0px, -50%) scaleX(-1);
+    }
+
+    &:after {
+      left: 100%;
+      transform: translate(0px, -50%);
+    }
+  }
+
+  &.no-lights {
+    .title {
+      &:before,
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  .subtitle {
+    margin-top: 10px;
+  }
+}
+
 .title {
+  position: relative;
   text-align: center;
+  text-transform: uppercase;
+  font-family: var(--font);
+  margin: 0 auto;
   .ta--l {
     text-align: left;
-  }
-  &.title--h1 {
-    font-size: 44px;
-    text-align: center;
   }
 }
 
@@ -14,7 +53,17 @@
   font-size: 28px;
   line-height: 1.1;
   text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+  font-family: var(--font);
+  font-weight: 500;
   .ta--l {
     text-align: left;
   }
+}
+
+svg text.title.title--h2 {
+  font-size: 44px;
+  font-family: var(--font);
+  text-transform: uppercase;
 }
