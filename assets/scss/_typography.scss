@@ -10,6 +10,9 @@
       background: url('../img/lights.webp') no-repeat left center;
       background-size: auto 100%;
       top: 50%;
+      @media (max-width: 767px) {
+        content: none;
+      }
     }
 
     &:before {
@@ -57,6 +60,9 @@
   color: var(--white);
   font-family: var(--font);
   font-weight: 500;
+  @media (max-width: 767px) {
+    font-size: 22px;
+  }
   .ta--l {
     text-align: left;
   }
@@ -66,4 +72,7 @@ svg text.title.title--h2 {
   font-size: 44px;
   font-family: var(--font);
   text-transform: uppercase;
+  @media (max-width: 767px) {
+    font-size: 40px;
+  }
 }
