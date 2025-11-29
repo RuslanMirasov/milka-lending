@@ -72,9 +72,6 @@ svg text.title.title--h2 {
   font-size: 44px;
   font-family: var(--font);
   text-transform: uppercase;
-  @media (max-width: 767px) {
-    font-size: 40px;
-  }
 }
 
 svg text.title.title--h1 {
@@ -85,14 +82,51 @@ svg text.title.title--h1 {
 
 .title {
   &.title--main {
-    width: 344px;
+    width: myclamp(344px, 344px, 1920px, 5000px);
     position: relative;
+
     @media (max-width: 1279px) {
       top: -20px;
     }
     @media (max-width: 767px) {
       width: 300px;
       top: 18px;
+    }
+  }
+
+  &.title-products {
+    width: 344px;
+    position: relative;
+    @media (max-width: 1279px) {
+      margin-bottom: -10px;
+    }
+    @media (max-width: 767px) {
+      width: 260px;
+      margin-bottom: -20px;
+    }
+  }
+
+  &.title--nabor {
+    width: 514px;
+    position: relative;
+    @media (max-width: 1279px) {
+      margin-bottom: -10px;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      max-width: 360px;
+    }
+  }
+
+  &.title--brends {
+    width: 310px;
+    position: relative;
+    @media (max-width: 1279px) {
+      margin-bottom: -10px;
+    }
+    @media (max-width: 767px) {
+      width: 230px;
+      margin-bottom: -20px;
     }
   }
 }

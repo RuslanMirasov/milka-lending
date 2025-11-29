@@ -388,11 +388,73 @@ a {
 
 .header {
   display: block;
-  position: fixed;
+  position: absolute;
   left: 0px;
   top: 0px;
+  width: 100%;
+  height: 160px;
+}
+.header .logo {
+  position: absolute;
+  width: clamp(131px, 6.8229vw, 341px);
+  height: clamp(64px, 3.3333vw, 167px);
+  right: 50%;
+  top: clamp(45px, 2.3438vw, 117px);
+  margin-right: clamp(520px, 27.0833vw, 1354px);
+}
+.header .logo img {
+  width: 100%;
+  height: 100%;
+}
+.header .fond {
+  position: absolute;
+  width: clamp(90px, 4.6875vw, 234px);
+  border-radius: 80px;
+  height: clamp(80px, 4.1667vw, 208px);
+  left: 50%;
+  top: clamp(20px, 1.0417vw, 52px);
+  transform: translate(clamp(586px, 30.5208vw, 1526px), 0px);
 }
 
+@media (max-width: 1430px) and (min-width: 768px) {
+  .header .logo {
+    position: absolute;
+    width: 131px;
+    height: 64px;
+    right: auto;
+    left: 20px;
+    top: 30px;
+    margin-right: 0px;
+  }
+  .header .fond {
+    width: 60px;
+    height: 54px;
+    border-radius: 0px;
+    left: auto;
+    right: 20px;
+    top: 30px;
+    background: url("../img/logo-fond.webp") no-repeat center center/cover;
+    transform: translate(0px, 0px);
+  }
+}
+@media (max-width: 767px) {
+  .header .logo {
+    position: absolute;
+    width: 100px;
+    height: 48px;
+    right: auto;
+    left: 20px;
+    top: 20px;
+    margin-right: 0px;
+  }
+  .header .fond {
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    top: 14px;
+    transform: translate(98px, 0px);
+  }
+}
 .button {
   display: flex;
   overflow: hidden;
@@ -436,7 +498,8 @@ a {
   width: 100%;
   height: 100%;
   background: url("../img/noize.png") repeat;
-  opacity: 0.8;
+  background-size: 20px 20px;
+  opacity: 0.4;
 }
 .button.button--violet {
   min-height: 40px;
@@ -528,11 +591,6 @@ svg text.title.title--h2 {
   font-family: var(--font);
   text-transform: uppercase;
 }
-@media (max-width: 767px) {
-  svg text.title.title--h2 {
-    font-size: 40px;
-  }
-}
 
 svg text.title.title--h1 {
   font-size: 54px;
@@ -541,7 +599,7 @@ svg text.title.title--h1 {
 }
 
 .title.title--main {
-  width: 344px;
+  width: clamp(344px, 17.9167vw, 896px);
   position: relative;
 }
 @media (max-width: 1279px) {
@@ -555,19 +613,72 @@ svg text.title.title--h1 {
     top: 18px;
   }
 }
+.title.title-products {
+  width: 344px;
+  position: relative;
+}
+@media (max-width: 1279px) {
+  .title.title-products {
+    margin-bottom: -10px;
+  }
+}
+@media (max-width: 767px) {
+  .title.title-products {
+    width: 260px;
+    margin-bottom: -20px;
+  }
+}
+.title.title--nabor {
+  width: 514px;
+  position: relative;
+}
+@media (max-width: 1279px) {
+  .title.title--nabor {
+    margin-bottom: -10px;
+  }
+}
+@media (max-width: 767px) {
+  .title.title--nabor {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+.title.title--brends {
+  width: 310px;
+  position: relative;
+}
+@media (max-width: 1279px) {
+  .title.title--brends {
+    margin-bottom: -10px;
+  }
+}
+@media (max-width: 767px) {
+  .title.title--brends {
+    width: 230px;
+    margin-bottom: -20px;
+  }
+}
 
 .section--hero {
   position: relative;
+  transition: transform 2s cubic-bezier(0, 1, 0.3, 1);
   width: 100%;
   height: clamp(820px, 42.7083vw, 1012px);
   pointer-events: none;
 }
 .section--hero .container {
-  pointer-events: all;
+  position: relative;
   z-index: 2;
+  pointer-events: all;
+}
+.section--hero .header {
+  z-index: 3;
+}
+.section--hero .header a {
+  pointer-events: all;
 }
 .section--hero .titles {
-  margin-top: 60px;
+  margin-top: clamp(60px, 3.125vw, 156px);
 }
 .section--hero:before {
   content: "";
@@ -596,6 +707,7 @@ svg text.title.title--h1 {
   min-width: 1920px;
   height: 820px;
   transform: translate(-50%, 0%);
+  pointer-events: none;
   background: url("../img/hero-bg.webp") no-repeat center top/cover;
 }
 @media (max-width: 1430px) {
@@ -612,7 +724,7 @@ svg text.title.title--h1 {
   width: 100%;
   max-width: 460px;
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: clamp(80px, 4.1667vw, 208px);
   text-align: center;
   gap: 10px;
 }
@@ -679,11 +791,16 @@ svg text.title.title--h1 {
   }
 }
 .section--girl {
-  height: 490px;
+  height: clamp(490px, 25.5208vw, 1276px);
   margin-top: -740px;
   margin-bottom: -200px;
   z-index: 3;
   pointer-events: none;
+}
+@media (min-width: 1921px) {
+  .section--girl {
+    margin-top: calc(-1 * clamp(-740px, 38.5417vw, 906px));
+  }
 }
 @media (max-width: 767px) {
   .section--girl {
@@ -694,12 +811,12 @@ svg text.title.title--h1 {
 
 .girl {
   width: auto;
-  height: 488px;
+  height: clamp(488px, 25.4167vw, 1271px);
   display: block;
   position: absolute;
   bottom: 0px;
   left: 50%;
-  transform: translate(180px, 0%);
+  transform: translate(clamp(180px, 9.375vw, 469px), 0%);
 }
 @media (max-width: 1439px) {
   .girl {
@@ -762,13 +879,14 @@ svg text.title.title--h1 {
     background-size: 100% 2378px;
   }
   .section--body:before {
-    background-size: 100% auto;
+    background-size: 100% 550px;
   }
 }
 @media (max-width: 767px) {
   .section--body {
     background: url("../img/body-bg-mobil.webp") no-repeat center top;
     background-size: 100% 2442px;
+    margin-bottom: -350px;
   }
 }
 
@@ -849,7 +967,8 @@ svg text.title.title--h1 {
   width: 100%;
   height: 100%;
   background: url("../img/noize.png") repeat;
-  opacity: 0.4;
+  background-size: 20px 20px;
+  opacity: 0.3;
 }
 .slider .swiper-slide span {
   width: 100%;

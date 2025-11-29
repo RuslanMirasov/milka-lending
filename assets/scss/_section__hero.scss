@@ -1,15 +1,24 @@
 .section--hero {
   position: relative;
+  transition: transform 2s cubic-bezier(0, 1, 0.3, 1);
   width: 100%;
   height: myclamp(820px, 820px, 1920px, 2370px);
   pointer-events: none;
   .container {
-    pointer-events: all;
+    position: relative;
     z-index: 2;
+    pointer-events: all;
+  }
+
+  .header {
+    z-index: 3;
+    a {
+      pointer-events: all;
+    }
   }
 
   .titles {
-    margin-top: 60px;
+    margin-top: myclamp(60px, 60px, 1920px, 5000px);
   }
 
   &:before {
@@ -38,6 +47,7 @@
   min-width: 1920px;
   height: 820px;
   transform: translate(-50%, 0%);
+  pointer-events: none;
   background: url('../img/hero-bg.webp') no-repeat center top/cover;
 
   @media (max-width: 1430px) {
@@ -53,7 +63,7 @@
   width: 100%;
   max-width: 460px;
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: myclamp(80px, 80px, 1920px, 5000px);
   text-align: center;
   gap: 10px;
 
