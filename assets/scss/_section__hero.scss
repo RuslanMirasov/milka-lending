@@ -1,0 +1,46 @@
+.section--hero {
+  width: 100%;
+  height: myclamp(820px, 820px, 1920px, 2370px);
+  margin-bottom: -450px;
+}
+
+.scene {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  width: 100%;
+  min-width: 1920px;
+  height: 820px;
+  transform: translate(-50%, 0%);
+  background: url('../img/hero-bg.webp') no-repeat center top/cover;
+
+  @media (max-width: 1430px) {
+    background: url('../img/hero-bg-tablet.webp') no-repeat center top/cover;
+  }
+}
+
+@media (max-width: 1279px) {
+  .section--hero {
+    height: 750px;
+    margin-bottom: -450px;
+  }
+
+  .scene {
+    height: 750px;
+    background-size: 1600px 700px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section--hero {
+    height: 1024px;
+    margin-bottom: -370px;
+  }
+
+  .scene {
+    height: 1024px;
+    background: url('../img/hero-bg-mobil.webp') no-repeat center top/cover;
+    background-size: 768px 1024px;
+  }
+}
