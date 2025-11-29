@@ -1,9 +1,59 @@
+.section--girl {
+  height: 490px;
+  margin-top: -740px;
+  margin-bottom: -200px;
+  z-index: 3;
+  pointer-events: none;
+  @media (max-width: 767px) {
+    margin-top: -660px;
+    margin-bottom: -200px;
+  }
+}
+
+.girl {
+  width: auto;
+  height: 488px;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(180px, 0%);
+
+  @media (max-width: 1439px) {
+    height: 440px;
+    transform: translate(160px, 0%);
+  }
+
+  @media (max-width: 1279px) {
+    height: 340px;
+    left: auto;
+    right: 0px;
+    transform: translate(20px, 0%);
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    height: 250px;
+    transform: translate(40px, 0%);
+  }
+
+  @media (max-width: 767px) {
+    height: 380px;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, 0%);
+  }
+}
+
 .section--body {
   padding-top: 200px;
   padding-bottom: 360px;
   margin-bottom: -360px;
   background: url('../img/body-bg.webp') no-repeat center top;
   background-size: 1920px 2378px;
+  pointer-events: none;
+  .container {
+    pointer-events: all;
+  }
 
   &:before {
     content: '';
@@ -15,6 +65,9 @@
     top: 0px;
     background: url('../img/lights-top.webp') no-repeat center top;
     background-size: 1920px 550px;
+    // @media (max-width: 767px) {
+    //   content: none;
+    // }
   }
 
   @media (max-width: 1365px) {

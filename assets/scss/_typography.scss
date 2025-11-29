@@ -76,3 +76,23 @@ svg text.title.title--h2 {
     font-size: 40px;
   }
 }
+
+svg text.title.title--h1 {
+  font-size: 54px;
+  font-family: var(--heavy);
+  text-transform: uppercase;
+}
+
+.title {
+  &.title--main {
+    width: 344px;
+    position: relative;
+    @media (max-width: 1279px) {
+      top: -20px;
+    }
+    @media (max-width: 767px) {
+      width: 300px;
+      top: 18px;
+    }
+  }
+}

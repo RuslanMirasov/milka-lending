@@ -1,12 +1,37 @@
 .section--hero {
+  position: relative;
   width: 100%;
   height: myclamp(820px, 820px, 1920px, 2370px);
-  margin-bottom: -450px;
+  pointer-events: none;
+  .container {
+    pointer-events: all;
+    z-index: 2;
+  }
+
+  .titles {
+    margin-top: 60px;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 120px;
+    width: myclamp(120px, 165px, 1920px, 2370px);
+    height: myclamp(148px, 204px, 1920px, 2370px);
+    background: url('../img/home.webp') no-repeat center center/cover;
+    z-index: 2;
+    @media (max-width: 767px) {
+      top: 580px;
+    }
+  }
 }
 
 .scene {
   display: block;
   position: absolute;
+  z-index: 1;
   left: 50%;
   top: 0px;
   width: 100%;
@@ -20,6 +45,42 @@
   }
 }
 
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  margin-top: 80px;
+  text-align: center;
+  gap: 10px;
+
+  ul {
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 10px;
+
+    li {
+      flex: 1;
+      font-size: 18px;
+      font-weight: 500;
+      text-transform: uppercase;
+
+      b {
+        font-size: 24px;
+        color: var(--yellow);
+      }
+    }
+  }
+}
+
 @media (max-width: 1279px) {
   .section--hero {
     height: 750px;
@@ -29,6 +90,21 @@
   .scene {
     height: 750px;
     background-size: 1600px 700px;
+  }
+
+  .description {
+    max-width: 400px;
+    margin-top: 40px;
+    gap: 0px;
+
+    ul {
+      li {
+        font-size: 16px;
+        b {
+          font-size: 22px;
+        }
+      }
+    }
   }
 }
 
@@ -42,5 +118,20 @@
     height: 1024px;
     background: url('../img/hero-bg-mobil.webp') no-repeat center top/cover;
     background-size: 768px 1024px;
+  }
+
+  .description {
+    max-width: 310px;
+    margin-top: 54px;
+    gap: 0px;
+
+    ul {
+      li {
+        &:last-child {
+          margin-top: 30px;
+          margin-bottom: 12px;
+        }
+      }
+    }
   }
 }
