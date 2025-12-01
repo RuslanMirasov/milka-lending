@@ -31,6 +31,9 @@
     height: myclamp(148px, 204px, 1920px, 2370px);
     background: url('../img/home.webp') no-repeat center center/cover;
     z-index: 2;
+    @media (min-width: 1600px) {
+      top: 180px;
+    }
     @media (max-width: 767px) {
       top: 580px;
     }

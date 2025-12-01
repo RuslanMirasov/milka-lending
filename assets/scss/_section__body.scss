@@ -22,6 +22,9 @@
   left: 50%;
   transform: translate(myclamp(180px, 180px, 1920px, 5000px), 0%);
 
+  @media (min-width: 1600px) {
+    left: 51%;
+  }
   @media (max-width: 1439px) {
     height: 440px;
     transform: translate(160px, 0%);
@@ -144,7 +147,7 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
-    background: linear-gradient(#ffffff, var(--bg));
+    background: linear-gradient(#ffffff, #6f50aa);
     margin: 20px 0px 60px 0px;
     box-shadow: 0px 35px 22px -24px rgba(46, 24, 78, 0.8);
     transition: opacity 0.5s;
