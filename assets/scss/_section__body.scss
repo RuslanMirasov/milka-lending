@@ -76,6 +76,10 @@
   @media (max-width: 1365px) {
     margin-bottom: -300px;
   }
+
+  @media (max-width: 1279px) {
+    margin-top: -220px;
+  }
   @media (min-width: 1921px) {
     background-size: 100% 2378px;
     &:before {
@@ -86,6 +90,10 @@
     background: url('../img/body-bg-mobil.webp') no-repeat center top;
     background-size: 100% 2442px;
     margin-bottom: -350px;
+    &:before {
+      top: 18px;
+      background-size: 1600px 480px;
+    }
   }
 }
 

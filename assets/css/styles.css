@@ -884,6 +884,11 @@ svg text.title.title--h1 {
     margin-bottom: -300px;
   }
 }
+@media (max-width: 1279px) {
+  .section--body {
+    margin-top: -220px;
+  }
+}
 @media (min-width: 1921px) {
   .section--body {
     background-size: 100% 2378px;
@@ -897,6 +902,10 @@ svg text.title.title--h1 {
     background: url("../img/body-bg-mobil.webp") no-repeat center top;
     background-size: 100% 2442px;
     margin-bottom: -350px;
+  }
+  .section--body:before {
+    top: 18px;
+    background-size: 1600px 480px;
   }
 }
 
