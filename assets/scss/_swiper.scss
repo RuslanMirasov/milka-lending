@@ -46,6 +46,10 @@
     opacity: 0.3;
     pointer-events: none;
   }
+
+  @media (max-width: 899px) {
+    display: none;
+  }
 }
 
 .swiper-pagination {

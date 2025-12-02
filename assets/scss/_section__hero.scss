@@ -1,6 +1,7 @@
 .section--hero {
   position: relative;
-  transition: transform 2s cubic-bezier(0, 1, 0.3, 1);
+  //transition: transform 2s cubic-bezier(0, 1, 0.3, 1);
+  will-change: transform;
   width: 100%;
   height: myclamp(820px, 820px, 1920px, 2370px);
   pointer-events: none;
@@ -33,6 +34,11 @@
     z-index: 2;
     @media (min-width: 1600px) {
       top: 180px;
+      right: -19px;
+    }
+    @media (min-width: 1921px) {
+      right: 0px;
+      top: 240px;
     }
     @media (max-width: 767px) {
       top: 580px;

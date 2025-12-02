@@ -6,21 +6,19 @@ export const initParallax = () => {
   let ticking = false;
 
   const updateParallax = () => {
-    // отключение на маленьких экранах
     if (window.innerWidth < MIN_WIDTH) {
       parallax.style.transform = '';
       return;
     }
 
-    const rect = parallax.getBoundingClientRect();
-    const offset = -rect.top * 0.7; // скорость параллакса
+    const offset = window.scrollY * 0.5;
 
     parallax.style.transform = `translateY(${offset}px)`;
   };
 
   const onScroll = () => {
     if (!ticking) {
-      window.requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
         updateParallax();
         ticking = false;
       });
@@ -28,7 +26,6 @@ export const initParallax = () => {
     }
   };
 
-  // первое обновление
   updateParallax();
 
   window.addEventListener('scroll', onScroll);

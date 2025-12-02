@@ -33,6 +33,10 @@
         content: none;
       }
     }
+
+    @media (min-width: 2044px) {
+      margin-top: 40px;
+    }
   }
 
   .subtitle {
@@ -62,6 +66,10 @@
   font-weight: 500;
   @media (max-width: 767px) {
     font-size: 22px;
+    max-width: 345px;
+    margin: auto;
+    margin-top: 16px;
+    margin-bottom: 10px;
   }
   .ta--l {
     text-align: left;
@@ -103,6 +111,7 @@ svg text.title.title--h1 {
     @media (max-width: 767px) {
       width: 260px;
       margin-bottom: -20px;
+      margin-top: 20px;
     }
   }
 
@@ -114,7 +123,7 @@ svg text.title.title--h1 {
     }
     @media (max-width: 767px) {
       width: 100%;
-      max-width: 360px;
+      margin-bottom: 0px;
     }
   }
 
