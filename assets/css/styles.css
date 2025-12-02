@@ -644,6 +644,11 @@ svg text.title.title--h1 {
     margin-top: 20px;
   }
 }
+@media (max-width: 414px) {
+  .title.title-products {
+    margin-top: -20px;
+  }
+}
 .title.title--nabor {
   width: 514px;
   position: relative;
@@ -808,6 +813,14 @@ svg text.title.title--h1 {
     background: url("../img/hero-bg-mobil.webp") no-repeat center top/cover;
     background-size: 768px 1024px;
   }
+}
+@media (max-width: 767px) and (max-width: 414px) {
+  .scene {
+    background: url("../img/hero-bg-mobil2.webp") no-repeat center top/cover;
+    background-size: 414px 1024px;
+  }
+}
+@media (max-width: 767px) {
   .description {
     max-width: 310px;
     margin-top: 54px;
@@ -941,6 +954,11 @@ svg text.title.title--h1 {
   .section--body:before {
     top: 18px;
     background-size: 5600px 480px;
+  }
+}
+@media (max-width: 414px) {
+  .section--body {
+    margin-top: 20px;
   }
 }
 

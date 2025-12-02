@@ -137,6 +137,11 @@
     height: 1024px;
     background: url('../img/hero-bg-mobil.webp') no-repeat center top/cover;
     background-size: 768px 1024px;
+
+    @media (max-width: 414px) {
+      background: url('../img/hero-bg-mobil2.webp') no-repeat center top/cover;
+      background-size: 414px 1024px;
+    }
   }
 
   .description {

@@ -113,6 +113,9 @@ svg text.title.title--h1 {
       margin-bottom: -20px;
       margin-top: 20px;
     }
+    @media (max-width: 414px) {
+      margin-top: -20px;
+    }
   }
 
   &.title--nabor {
