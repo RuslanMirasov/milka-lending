@@ -10,9 +10,9 @@
     position: absolute;
     width: myclamp(131px, 131px, 1920px, 5000px);
     height: myclamp(64px, 64px, 1920px, 5000px);
-    right: 50%;
+    left: 50%;
     top: myclamp(45px, 45px, 1920px, 5000px);
-    margin-right: myclamp(520px, 520px, 1920px, 5000px);
+    transform: translate(-50%, 0%);
 
     img {
       width: 100%;
@@ -33,16 +33,6 @@
 
 @media (max-width: 1430px) and (min-width: 768px) {
   .header {
-    .logo {
-      position: absolute;
-      width: 131px;
-      height: 64px;
-      right: auto;
-      left: 20px;
-      top: 30px;
-      margin-right: 0px;
-    }
-
     .fond {
       width: 60px;
       height: 54px;
@@ -66,6 +56,7 @@
       right: auto;
       left: 20px;
       top: 20px;
+      transform: translate(0%, 0%);
       margin-right: 0px;
     }
 

@@ -1,5 +1,5 @@
 import { initSliders } from './sliders.js';
-import { initParallax } from './parallax.js';
+//import { initParallax } from './parallax.js';
 
 initSliders();
-initParallax();
+//initParallax();

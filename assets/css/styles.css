@@ -404,9 +404,9 @@ a {
   position: absolute;
   width: clamp(131px, 6.8229vw, 341px);
   height: clamp(64px, 3.3333vw, 167px);
-  right: 50%;
+  left: 50%;
   top: clamp(45px, 2.3438vw, 117px);
-  margin-right: clamp(520px, 27.0833vw, 1354px);
+  transform: translate(-50%, 0%);
 }
 .header .logo img {
   width: 100%;
@@ -423,15 +423,6 @@ a {
 }
 
 @media (max-width: 1430px) and (min-width: 768px) {
-  .header .logo {
-    position: absolute;
-    width: 131px;
-    height: 64px;
-    right: auto;
-    left: 20px;
-    top: 30px;
-    margin-right: 0px;
-  }
   .header .fond {
     width: 60px;
     height: 54px;
@@ -451,6 +442,7 @@ a {
     right: auto;
     left: 20px;
     top: 20px;
+    transform: translate(0%, 0%);
     margin-right: 0px;
   }
   .header .fond {
@@ -614,17 +606,18 @@ svg text.title.title--h1 {
 }
 
 .title.title--main {
-  width: clamp(344px, 17.9167vw, 896px);
+  width: clamp(444px, 23.125vw, 1156px);
   position: relative;
 }
 @media (max-width: 1279px) {
   .title.title--main {
-    top: -20px;
+    top: -30px;
+    width: clamp(380px, 29.6875vw, 380px);
   }
 }
 @media (max-width: 767px) {
   .title.title--main {
-    width: 300px;
+    width: 280px;
     top: 18px;
   }
 }
@@ -684,13 +677,13 @@ svg text.title.title--h1 {
   position: relative;
   will-change: transform;
   width: 100%;
-  height: clamp(820px, 42.7083vw, 1012px);
+  height: clamp(820px, 42.7083vw, 1093px);
   pointer-events: none;
 }
 .section--hero .container {
   position: relative;
   z-index: 2;
-  pointer-events: all;
+  pointer-events: none;
 }
 .section--hero .header {
   z-index: 3;
@@ -699,7 +692,7 @@ svg text.title.title--h1 {
   pointer-events: all;
 }
 .section--hero .titles {
-  margin-top: clamp(60px, 3.125vw, 156px);
+  margin-top: clamp(180px, 9.375vw, 469px);
 }
 .section--hero:before {
   content: "";
@@ -710,23 +703,23 @@ svg text.title.title--h1 {
   width: clamp(120px, 8.5938vw, 204px);
   height: clamp(148px, 10.625vw, 252px);
   background: url("../img/home.webp") no-repeat center center/cover;
-  z-index: 2;
+  z-index: 3;
 }
 @media (min-width: 1600px) {
   .section--hero:before {
-    top: 180px;
+    top: 120px;
     right: -19px;
   }
 }
 @media (min-width: 1921px) {
   .section--hero:before {
     right: 0px;
-    top: 240px;
+    top: 190px;
   }
 }
 @media (max-width: 767px) {
   .section--hero:before {
-    top: 580px;
+    top: 320px;
   }
 }
 
@@ -738,10 +731,11 @@ svg text.title.title--h1 {
   top: 0px;
   width: 100%;
   min-width: 1920px;
-  height: 820px;
+  height: clamp(820px, 42.7083vw, 1093px);
   transform: translate(-50%, 0%);
-  pointer-events: none;
+  pointer-events: all;
   background: url("../img/hero-bg.webp") no-repeat center top/cover;
+  z-index: 2;
 }
 @media (max-width: 1430px) {
   .scene {
@@ -757,7 +751,7 @@ svg text.title.title--h1 {
   width: 100%;
   max-width: 460px;
   margin: 0 auto;
-  margin-top: clamp(80px, 4.1667vw, 208px);
+  margin-top: clamp(80px, 4.1667vw, 107px);
   text-align: center;
   gap: 10px;
 }
@@ -805,22 +799,16 @@ svg text.title.title--h1 {
 }
 @media (max-width: 767px) {
   .section--hero {
-    height: 1024px;
-    margin-bottom: -370px;
+    height: 750px;
+  }
+  .section--hero .title {
+    margin-top: -110px;
   }
   .scene {
-    height: 1024px;
+    height: 500px;
     background: url("../img/hero-bg-mobil.webp") no-repeat center top/cover;
-    background-size: 768px 1024px;
+    background-size: 768px 500px;
   }
-}
-@media (max-width: 767px) and (max-width: 414px) {
-  .scene {
-    background: url("../img/hero-bg-mobil2.webp") no-repeat center top/cover;
-    background-size: 414px 1024px;
-  }
-}
-@media (max-width: 767px) {
   .description {
     max-width: 310px;
     margin-top: 54px;
@@ -833,14 +821,14 @@ svg text.title.title--h1 {
 }
 .section--girl {
   height: clamp(490px, 25.5208vw, 1276px);
-  margin-top: -740px;
+  margin-top: -760px;
   margin-bottom: -200px;
   z-index: 3;
   pointer-events: none;
 }
 @media (min-width: 1921px) {
   .section--girl {
-    margin-top: calc(-1 * clamp(-740px, 38.5417vw, 906px));
+    margin-top: calc(-1 * clamp(-760px, 39.5833vw, 1013px));
   }
 }
 @media (max-width: 767px) {
