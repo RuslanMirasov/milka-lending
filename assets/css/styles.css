@@ -911,6 +911,9 @@ svg text.title.title--h1 {
 .section--body .container {
   pointer-events: all;
 }
+.section--body .subtitle {
+  margin-top: -10px;
+}
 .section--body:before {
   content: "";
   position: absolute;
